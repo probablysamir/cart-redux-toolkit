@@ -29,7 +29,7 @@ export const Cartlist = () => {
         <Loader />
       </div>
     );
-  } else if (totalAmount > 1) {
+  } else if (totalAmount > 0) {
     return (
       <div className="min-h-screen bg-slate-300 p-5">
         <ul className="container mx-auto">
@@ -55,7 +55,7 @@ export const Cartlist = () => {
                   <button
                     className="text-blue-700"
                     onClick={() =>
-                      item.amount > 0
+                      item.amount > 1
                         ? dispatch(decreaseItem(item.id))
                         : dispatch(removeItem(item.id))
                     }
