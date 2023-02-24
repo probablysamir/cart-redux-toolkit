@@ -55,7 +55,7 @@ export const Cartlist = () => {
                   <button
                     className="text-blue-700"
                     onClick={() =>
-                      item.amount > 1
+                      item.amount > 0
                         ? dispatch(decreaseItem(item.id))
                         : dispatch(removeItem(item.id))
                     }
